@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ddd;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  margin: 50px;
+}
+/*container*/
+.container{
+  display: grid;
+  gap: 10px;
+}
+
+/* header*/
+.header {
+  display: grid;
+  grid-template-areas: 
+  'tentang_kami tentang_kami feature-1'
+  'tentang_kami tentang_kami feature-2'
+  'tentang_kami tentang_kami feature-3';
+  gap: 5px;
+  
+}
+.tentang_kami {
+  grid-area: tentang_kami;
+  min-height: 300px;
+  background-image: url(social.JPG);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  
+}
+.tentang_kami .heading{
+  display: block;
+}
+/* .tentang_kami > * {
+  display: none;
+} */
+.features {
+  background-color: rgb(63, 50, 50);
+  color: white;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  cursor: pointer;
+  
+}
+.feature-1 {
+  grid-area: feature-1;
+  background-image: url();
+  background-clip: cover;
+}
+.feature-2 {
+  grid-area: feature-2;
+  background-image: url();
+  background-clip: cover;
+}
+.feature-3 {
+  grid-area: feature-3;
+  background-image: url();
+  background-clip: cover;
+}
+.features .nama {
+font-size: 1em;
+font-weight: 100;
+}
+/*navigasi*/
+.menu {
+  order: -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+.menu .jasa {
+  /* font-size: 20; */
+  color: #333;
+}
+.menu ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+}
+.menu a {
+display: block;
+background-color: darkgray;
+color: white;
+text-decoration: none;
+text-align: center;
+padding: 5px;
+text-transform: uppercase;
+}
+/*services*/
+.services{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 25px;
+  
+}
+.sevice{
+  background-color: rgb(88, 68, 68);
+  padding: 15px;
+  text-align: center;
+  color: white;
+  border: 1px solid darkgrey;
+  border-radius: 3px;
+ 
+}
+.service .icon{
+  font-size: 3em;
+}
+.service h3{
+  font-size: 1.5em;
+}
+.service p{
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+/*responsive breakpoint*/
+@media (max-width: 1024px){
+.menu{
+  order: inherit;
+  grid-template-columns: 1fr;
+}
+.menu .jasa {
+  display: none;
+}
+.tentang_kami > *{
+  display: block;
+  background-color: silver;
+  color: white;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.tentang_kami{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+}
+}
+@media (max-width: 768) {
+  
+}
+@media (max-width: 500) {
+  
+}
+/* .container {
+  padding: 35px;
+  background-color: silver;
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-top: 10px;
+
+} */
